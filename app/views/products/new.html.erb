@@ -1,0 +1,10 @@
+<h1>Add New Product</h1>
+
+  <%= form_for @product do |form| %>
+    <%= render partial: '/products/form', object: form %>
+
+       <div class="submit-field-box">
+     <%= form.submit %>
+     </div>
+
+    <%end%>

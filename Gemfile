@@ -12,6 +12,9 @@ gem 'rails', '~> 5.0.4'
 gem 'sqlite3'
 gem 'bcrypt'
 gem 'figaro'
+gem 'carrierwave'
+gem "mini_magick"
+gem 'fog'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

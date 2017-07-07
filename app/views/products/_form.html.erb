@@ -1,0 +1,29 @@
+<div class ="photo-upload-button">
+      <%= form.file_field :photos, multiple: true %>
+</div>
+
+<div class="form-field">
+    <%= form.label :category %>
+    <%= form.text_field :catefory, class: 'black' %>
+</div>
+
+<div class="form-field">
+    <%= form.label :product_name %>
+    <%= form.text_field :product_name, class: 'black' %>
+</div>
+
+<div class="form-field">
+    <%= form.label :price %>
+    <%= form.number_field :price, class: 'black' %>
+</div>
+
+<div class="form-field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, class: 'black' %>
+</div>
+
+<div class="form-field">
+    <%= form.label :size %>
+    <%= form.text_field :size, class: 'black' %>
+</div>
+
