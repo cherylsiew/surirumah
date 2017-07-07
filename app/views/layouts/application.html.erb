@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Surirumah</title>
+    <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- a) jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- b) bootstrap.min.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- c) braintree.js -->
+  <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+  <!-- d) fontawesome.js -->
+  <script src="https://use.fontawesome.com/b470fc1405.js"></script>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_120.js" async=""></script>
+  <script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20170501_01/e/js/element/element_main.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+  <link type="text/css" href="https://www.google.com/cse/static/style/look/v2/default.css" rel="stylesheet">
+  </head>
+
+  <nav class="navbar navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-logo" href="<%root_path%>">SURIRUMAH</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="homebutton"> <%= link_to "Home", root_path %></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Products</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+        Welcome <%= current_user.first_name %>
+        <%= link_to "Log Out", logout_path, method: :get %>
+        <% else %>
+        <%= link_to "Sign Up", signup_path %> or
+        <%= link_to "Log In", login_path, method: :get %>
+      <% end %>
+      </ul>
+    </div>
+  </nav>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
