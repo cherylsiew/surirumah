@@ -1,0 +1,18 @@
+
+
+  <% @purchases.each do |b| %>
+  Product ID: <%= b.product.id %><br>
+  Product Name: <%= b.product.product_name %><br>
+  Total Price: <%= b.total_price %><br>
+
+  <% if b.transaction_status == "submitted_for_settlement" %>
+  <%= "PAID" %>
+  <br>
+  <% else %>
+ 
+  <%= button_to "Make Payment", new_purchase_braintree_path(b.id), method: :get %>
+  <%= button_to "Cancel Purchase",purchase_path(b.id), method: :delete %>
+
+  <%end%>
+  <br>
+  <%end%>

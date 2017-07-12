@@ -1,3 +1,33 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border-top:solid #7d4627;
+}
+
+.flex-item {
+  background-color: white;
+  margin: 20px;
+  align-self: auto;
+  flex-basis: auto;
+  font-family: Lato;
+  
+}
+
+.flex-item>li {
+  list-style-type: none;
+  background-color: white;
+  margin: 20px;
+  font-family: Lato;
+}
+
+

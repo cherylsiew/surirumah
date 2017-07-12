@@ -19,7 +19,7 @@ end
 
 private
 def user_params
-  params.require(:user).permit(:first_name, :last_name, :password, :email, :address1, :address2, :postcode, :country, :telephone)
+  params.require(:user).permit(:first_name, :last_name, :password, :email, :address1, :address2, :postcode, :country, :telephone, :roles)
 end
 
 end

@@ -7,6 +7,8 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :password, length: { minimum: 6, message: "must be at least 6 characters" }
   enum roles: [:customer, :moderator, :superadmin]
+  has_many :products,:dependent => :destroy
+  has_many :purchases, :dependent => :destroy
   
     # def self.authenticate(email, password)
     # user = User.find_by(email)

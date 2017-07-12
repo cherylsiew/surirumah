@@ -22,9 +22,9 @@
   text-align: center;
   margin-top: 13.5px;
 }
-.navbar-nav>li>a{color:black;}
+.navbar-nav>li>{color:black;}
 
-.navbar-nav>li>a:hover{color:#7d4627;}
+.nav>li>form {margin-top: 10.5px;}
 
 .navbar-right{margin-top: 13.5px;}
 
@@ -35,14 +35,22 @@ font-weight: bold;
 padding: 0px 0px 0px 0px;
 }
 
+.dropdown{
+  color: black;
+  font-family: Lato;
+  margin-top: 3.5px;
+  font-size: 16px;
+}
+
 .signuppage {
   padding: 0px 0px 0px 30px;
-  background-color: #c9d8c5;
+  background-color: #edd9c0;
 }
 .loginpage {
   padding: 0px 0px 0px 30px;
-  background-color: #c9d8c5;
+  background-color: #edd9c0;
   height: 550px;
+  border-top: solid #7d4627;
 }
 .mySlides {display:none}
 /* On smaller screens, decrease text size */
@@ -68,4 +76,5 @@ padding: 0px 0px 0px 0px;
 .caption-padding h3{
   font-family: Lato;
 }
+
 

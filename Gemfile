@@ -14,8 +14,14 @@ gem 'bcrypt'
 gem 'figaro'
 gem 'carrierwave'
 gem "mini_magick"
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.18'
 gem 'fog'
+gem 'braintree'
 
+gem 'faker'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -44,6 +50,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do

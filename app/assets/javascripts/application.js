@@ -16,7 +16,9 @@
 //= require_tree .
 $(document).ready(function(){
     var myIndex = 0;
-    carousel();
+    if(document.getElementsByClassName("mySlides").length > 0){    
+        carousel();
+    }
 
     function carousel() {
         var i;
@@ -26,7 +28,7 @@ $(document).ready(function(){
            x[i].style.display = "none";  
         }
         myIndex++;
-        if (myIndex > x.length) {myIndex = 1}    
+        if (myIndex > x.length) {myIndex = 1}
         x[myIndex-1].style.display = "block";  
         setTimeout(carousel, 2000); // Change image every 2 seconds
     }

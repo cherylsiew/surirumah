@@ -1,0 +1,9 @@
+  <%= form_for [@product,@purchase]  do |form| %>
+    <%= render partial: '/purchases/form', object: form %>
+
+
+    <div class="submit-field-box">
+    <%= form.submit "Buy Now" %>
+    </div>
+
+    <%end%>
