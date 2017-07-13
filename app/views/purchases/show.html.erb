@@ -1,10 +1,5 @@
 <h1>Successful Purchases</h1>
 
-<% if @purchase.product.photos.size > 0 %>
-    <% @purchase.product.photos.each do |p| %><br>
-      <%= image_tag(p.frame.url)%><br>
-    <% end %>
-<%end%>
 
 Price: <%= @purchase.total_price%><br> 
 
