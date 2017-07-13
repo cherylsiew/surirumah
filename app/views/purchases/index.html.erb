@@ -3,6 +3,7 @@
   <% @purchases.each do |b| %>
   Product ID: <%= b.product.id %><br>
   Product Name: <%= b.product.product_name %><br>
+  Quantity (Backorders will be processed): <%= b.quantity%><br>
   Total Price: <%= b.total_price %><br>
 
   <% if b.transaction_status == "submitted_for_settlement" %>

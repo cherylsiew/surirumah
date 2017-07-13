@@ -18,8 +18,6 @@ def create
     if @purchase.save
       redirect_to user_purchases_path(@product,@purchase) #index_path
 
-    else
-      render "purchases/edit"
     end
   end
 
@@ -36,18 +34,6 @@ def create
 
   def index 
     @purchases = current_user.purchases
-  end
-
-  def edit
-    @purchase = Purchase.find(params[:id])
-  end
-
-  def update
-    @purchase = Purchase.find(params[:id])
-    @purchase.update(purchase_params)
-      if @purchase.save
-      redirect_to purchases_path(current_user)
-      end
   end
 
 

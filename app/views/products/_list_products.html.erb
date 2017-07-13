@@ -13,7 +13,7 @@
         <li><a><%= button_to "Add Product", new_product_path, method: :get%></a></li>
         <li><a><%= button_to "Delete Product", product_path(l), method: :delete%></a></li>
         <%else%>
-        <li><a><%= button_to "Buy Now", new_product_purchase_path(l), method: :get%></a></li>
+        <li><a><%= button_to "Add To Cart", new_product_purchase_path(l), method: :get%></a></li>
         <%end%>
     
     </div>
