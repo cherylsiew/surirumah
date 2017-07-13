@@ -17,6 +17,7 @@ gem "mini_magick"
 gem 'pg', '~> 0.18'
 gem 'fog'
 gem 'braintree'
+gem 'sqlite3'
 
 gem 'faker'
 
