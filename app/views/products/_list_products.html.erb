@@ -1,8 +1,9 @@
 
 <% @products.each do |l| %>
-    <% l.photos.each do |x| %>
     <div class="flex-item">
-    <%= image_tag x.frame.url unless l.photos.empty? %>     
+    <% l.photos.each do |x| %>
+    <%= image_tag x.frame.url unless l.photos.empty? %>
+    <%end%>     
     <li>Category: <%= l.category %></li>
     <li>Product Name: <%= l.product_name %></li>
     <li>Price in MYR: <%= l.price %></li>
@@ -18,5 +19,4 @@
         <%end%>
     
     </div>
-    <%end%> 
 <%end%>

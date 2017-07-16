@@ -29,7 +29,7 @@ class BraintreeController < ApplicationController
 
       redirect_to product_purchase_path(@purchase.product,@purchase), :flash => { :success => "Transaction successful!" }
     else
-      redirect_to braintree_new_path, :flash => { :error => "Transaction failed. Please try again." }
+      redirect_to new_purchase_braintree(@purchase), :flash => { :error => "Transaction failed. Please try again." }
     end 
   end
 
