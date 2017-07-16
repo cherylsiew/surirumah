@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 
   def create
     if current_user.superadmin? || current_user.moderator?
-    @product = Product.new(product_params)
+    @product = current_user.products.new(product_params)
     @product.save
     redirect_to products_path
     end
